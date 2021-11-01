@@ -8,23 +8,22 @@ import javax.validation.constraints.NotBlank;
 public class Task {
 
     @Id
-    @SequenceGenerator(name = "generator", sequenceName = "generator", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "generator")
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     @NotBlank(message = "Task's description must not be empty")
     private String description;
 
     private boolean done;
 
-    public Long getId() {
-        return id;
-    }
-
     public Task() {
     }
 
-    public void setId(Long id) {
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
         this.id = id;
     }
 
