@@ -11,8 +11,6 @@ import pl.pedyk.todosprongbootthymeleaf.model.TaskRepository;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 
 
 @RestController
